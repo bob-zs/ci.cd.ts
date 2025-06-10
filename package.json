@@ -12,7 +12,7 @@
     "dev": "npx tsc && node dist/main.js"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.17",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",
     "drizzle-kit": "^0.28.1",
