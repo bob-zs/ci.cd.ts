@@ -23,3 +23,25 @@ jobs:
 
       - name: Unit test
         run: npm run test -- --coverage
+
+  style:
+    name: Style
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Style test
+        run: npm run format:check
+
+      - name: Lint test
+        run: npm run lint
